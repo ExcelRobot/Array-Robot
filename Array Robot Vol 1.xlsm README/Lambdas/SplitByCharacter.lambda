@@ -1,0 +1,13 @@
+SplitByCharacter =LAMBDA(text_vector, LET(
+   \\LambdaName, "SplitByCharacter",
+   fnSingle, LAMBDA(text, LET(
+      _Sequence, SEQUENCE(LEN(text)),
+      _Transpose, COLUMNS(text_vector) = 1,
+      _Split, MID(text, IF(_Transpose, TRANSPOSE(_Sequence), _Sequence), 1),
+      _Result, IF(LEN(text) = 0, "", _Split),
+      _Result
+   )),
+   _IsArray, TYPE(text_vector) = 64,
+   _Result, IF(_IsArray, IFNA(Tile(text_vector, LAMBDA(x, fnSingle(x))), ""), fnSingle(text_vector)),
+   _Result
+));

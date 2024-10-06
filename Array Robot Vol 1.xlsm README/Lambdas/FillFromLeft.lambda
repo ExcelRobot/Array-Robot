@@ -1,0 +1,12 @@
+FillFromLeft =LAMBDA(array,[criteria], LET(
+   \\LambdaName, "FillFromLeft",
+   fnCriteria, IF(ISOMITTED(criteria), LAMBDA(x, x = ""), criteria),
+   _cols, SEQUENCE(1, COLUMNS(array)),
+   _rows, SEQUENCE(ROWS(array)),
+   fnIfBlank, LAMBDA(x, IF(x = "", "", x)),
+   fnFill, LAMBDA(vector,
+      SCAN(fnIfBlank(INDEX(vector, 1, 1)), vector, LAMBDA(s,x, IF(fnCriteria(x), s, x)))
+   ),
+   Result, Tile(_rows, LAMBDA(n, fnFill(CHOOSEROWS(array, n)))),
+   Result
+));

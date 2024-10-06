@@ -1,0 +1,394 @@
+/*
+Excel Array Manipulation LAMBDA functions
+Courtesy of Excel Robot
+
+The Microsoft Excel team recent released 11 new Excel functions for combining, shaping, and resizing arrays.
+I had already created similar ones for myself using the amazing LAMBDA function.  Since the new functions
+are only available to users running Beta Channel, I've renamed my versions and given them the same function 
+names so anyone with LAMBDA and LAMBDA helper functions (like MAKEARRAY), and import these LAMBDAs into your
+workbook and have nearly the same functionality.
+
+* Feel free to share this collection, appreciate any shout outs to Excel Robot along the way.
+
+Combining Arrays:
+VSTACK - https://support.microsoft.com/en-us/office/vstack-function-a4b86897-be0f-48fc-adca-fcc10d795a9c
+HSTACK - https://support.microsoft.com/en-us/office/hstack-function-98c4ab76-10fe-4b4f-8d5f-af1c125fe8c2
+
+Shaping Arrays:
+TOROW - https://support.microsoft.com/en-us/office/torow-function-b90d0964-a7d9-44b7-816b-ffa5c2fe2289
+TOCOL - https://support.microsoft.com/en-us/office/tocol-function-22839d9b-0b55-4fc1-b4e6-2761f8f122ed
+WRAPROWS - https://support.microsoft.com/en-us/office/wraprows-function-796825f3-975a-4cee-9c84-1bbddf60ade0
+WRAPCOLS - https://support.microsoft.com/en-us/office/wrapcols-function-d038b05a-57b7-4ee0-be94-ded0792511e2
+
+Resizing Arrays:
+TAKE - https://support.microsoft.com/en-us/office/take-function-25382ff1-5da1-4f78-ab43-f33bd2e4e003
+DROP - https://support.microsoft.com/en-us/office/drop-function-1cb4e151-9e17-4838-abe5-9ba48d8c6a34
+CHOOSEROWS - https://support.microsoft.com/en-us/office/chooserows-function-51ace882-9bab-4a44-9625-7274ef7507a3
+CHOOSECOLS - https://support.microsoft.com/en-us/office/choosecols-function-bf117976-2722-4466-9b9a-1c01ed9aebff
+EXPAND - https://support.microsoft.com/en-us/office/expand-function-7433fba5-4ad1-41da-a904-d5d95808bc38
+
+*/
+
+/*
+Name: Stack Arrays Vertically (VSTACK)
+Description: Stacks up to ten arrays vertically.
+Contributed By: Excel Robot (@ExcelRobot)
+Category: Array
+*/
+VSTACK = LAMBDA(array1, [array2], [array3], [array4], [array5], [array6], [array7], [array8], [array9], [array10],
+    LET(
+        stack, LAMBDA(a_1, a_2, MAKEARRAY(
+            ROWS(a_1) + ROWS(a_2),
+            COLUMNS(a_1),
+            LAMBDA(i, j,
+                IF(
+                    i <= ROWS(a_1),
+                    INDEX(a_1, i, j),
+                    INDEX(a_2, i - ROWS(a_1), j)
+                )
+            ))),
+        t_2, IF(ISOMITTED(array2), array1, stack(array1, array2)),
+        t_3, IF(ISOMITTED(array3), t_2, stack(t_2, array3)),
+        t_4, IF(ISOMITTED(array4), t_3, stack(t_3, array4)),
+        t_5, IF(ISOMITTED(array5), t_4, stack(t_4, array5)),
+        t_6, IF(ISOMITTED(array6), t_5, stack(t_5, array6)),
+        t_7, IF(ISOMITTED(array7), t_6, stack(t_6, array7)),
+        t_8, IF(ISOMITTED(array8), t_7, stack(t_7, array8)),
+        t_9, IF(ISOMITTED(array9), t_8, stack(t_8, array9)),
+        t_10, IF(ISOMITTED(array10), t_9, stack(t_9, array10)),
+        t_10
+    )
+);
+
+/*
+Name: Stack Arrays Horizontally (HSTACK)
+Description: Stacks up to ten arrays horizontally.
+Contributed By: Excel Robot (@ExcelRobot)
+Category: Array
+*/
+HSTACK = LAMBDA(array1, [array2], [array3], [array4], [array5], [array6], [array7], [array8], [array9], [array10],
+    LET(
+        r, ROWS(array1),
+        stack, LAMBDA(a_1,a_2, MAKEARRAY(
+                r,
+                COLUMNS(a_1) + COLUMNS(a_2),
+                LAMBDA(i,j,
+                    IF(
+                        j <= COLUMNS(a_1),
+                        INDEX(a_1, i, j),
+                        INDEX(a_2, i, j - COLUMNS(a_1))
+                    )
+                )
+            )
+        ),
+        t_2, IF(ISOMITTED(array2), array1, stack(array1, array2)),
+        t_3, IF(ISOMITTED(array3), t_2, stack(t_2, array3)),
+        t_4, IF(ISOMITTED(array4), t_3, stack(t_3, array4)),
+        t_5, IF(ISOMITTED(array5), t_4, stack(t_4, array5)),
+        t_6, IF(ISOMITTED(array6), t_5, stack(t_5, array6)),
+        t_7, IF(ISOMITTED(array7), t_6, stack(t_6, array7)),
+        t_8, IF(ISOMITTED(array8), t_7, stack(t_7, array8)),
+        t_9, IF(ISOMITTED(array9), t_8, stack(t_8, array9)),
+        t_10, IF(ISOMITTED(array10), t_9, stack(t_9, array10)),
+        t_10
+    )
+);
+
+/*
+Name: Reshape Array To One Row (TOROW)
+Description: Returns the array as one row.
+Contributed By: Excel Robot (@ExcelRobot)
+Category: Array
+*/
+TOROW = LAMBDA(array, [ignore], [scan_by_col],
+    LET(
+        base, IF(
+            ISOMITTED(scan_by_col),
+            array,
+            IF(scan_by_col = TRUE, TRANSPOSE(array), array)
+        ),
+        ColCount, COLUMNS(base),
+        Data, MAKEARRAY(
+            ROWS(base) * ColCount,
+            1,
+            LAMBDA(i, j,
+                LET(
+                    val, INDEX(
+                        base,
+                        ROUNDUP(i / ColCount, 0),
+                        MOD(i - 1, ColCount) + 1
+                    ),
+                    if(ISOMITTED(ignore),val,IF(val = ignore, "~~IGNORE~~", val))
+                )
+            )
+        ),
+        TRANSPOSE(FILTER(Data, Data <> "~~IGNORE~~"))
+    )
+);
+
+/*
+Name: Reshape Array To One Column (TOCOL)
+Description: Returns the array as one column.
+Contributed By: Excel Robot (@ExcelRobot)
+Category: Array
+*/
+TOCOL = LAMBDA(array, [ignore], [scan_by_col],
+    LET(
+        base, IF(
+            ISOMITTED(scan_by_col),
+            array,
+            IF(scan_by_col = TRUE, TRANSPOSE(array), array)
+        ),
+        ColCount, COLUMNS(base),
+        Data, MAKEARRAY(
+            ROWS(base) * ColCount,
+            1,
+            LAMBDA(i, j,
+                LET(
+                    val, INDEX(
+                        base,
+                        ROUNDUP(i / ColCount, 0),
+                        MOD(i - 1, ColCount) + 1
+                    ),
+                    IF(ISOMITTED(ignore), val, IF(val = ignore, "~~IGNORE~~", val))
+                )
+            )
+        ),
+        FILTER(Data, Data <> "~~IGNORE~~")
+    )
+);
+
+/*
+Name: Wrap Row Into Array (WRAPROWS)
+Description: Wraps a single row into a 2D array with specified number of columns.
+   Extra cells will show #N/A! or optional specified value.
+Contributed By: Excel Robot (@ExcelRobot)
+Category: Array
+*/
+WRAPROWS = LAMBDA(vector, wrap_count, [pad_with],
+    LET(
+        columns, wrap_count,
+        max_n, ROWS(vector) * COLUMNS(vector),
+        rows, ROUNDUP(max_n / wrap_count, 0),
+        missing, IF(ISOMITTED(pad_with), NA(), pad_with),
+        result, MAKEARRAY(
+            rows,
+            columns,
+            LAMBDA(i_pos, j_pos,
+                LET(
+                    v_pos, columns * (i_pos - 1) + j_pos,
+                    IF(v_pos <= max_n, INDEX(TOCOL(vector), v_pos), missing)
+                )
+            )
+        ),
+        result
+    )
+);
+
+/*
+Name: Wrap Column Into Array (WRAPCOLS)
+Description: Wraps a single column into a 2D array with specified number of rows.
+   Extra cells will show #N/A! or optional specified value.
+Contributed By: Excel Robot (@ExcelRobot)
+Category: Array
+*/
+WRAPCOLS = LAMBDA(vector, wrap_count, [pad_with],
+    LET(
+        rows, wrap_count,
+        max_n, ROWS(vector) * COLUMNS(vector),
+        columns, ROUNDUP(max_n / wrap_count, 0),
+        missing, IF(ISOMITTED(pad_with), NA(), pad_with),
+        result, MAKEARRAY(
+            rows,
+            columns,
+            LAMBDA(i_pos, j_pos,
+                LET(
+                    v_pos, rows * (j_pos - 1) + i_pos,
+                    IF(v_pos <= max_n, INDEX(TOCOL(vector), v_pos), missing)
+                )
+            )
+        ),
+        result
+    )
+);
+
+/*
+Name: Take Rows Or Columns From Array (TAKE)
+Description: Returns rows or columns from the start or end of an array.
+   Use negative numbers to return bottom rows or right most columns.
+Contributed By: Excel Robot (@ExcelRobot)
+Category: Array
+*/
+TAKE = LAMBDA(array, rows, [columns],
+    LET(
+        row_count, IF(ISOMITTED(rows), ROWS(array), MIN(ABS(rows), ROWS(array))),
+        col_count, IF(
+            ISOMITTED(columns),
+            COLUMNS(array),
+            MIN(ABS(columns), COLUMNS(array))
+        ),
+        first_row, IF(
+            ISOMITTED(rows), 
+            1, 
+            IF(rows > 0, 1, ROWS(array) + rows + 1)
+        ),
+        first_col, IF(
+            ISOMITTED(columns),
+            1,
+            IF(columns > 0, 1, COLUMNS(array) + columns + 1)
+        ),
+        result, MAKEARRAY(
+            row_count,
+            col_count,
+            LAMBDA(i, j, INDEX(array, i + first_row - 1, j + first_col - 1))
+        ),
+        result
+    )
+);
+
+/*
+Name: Drop Rows Or Columns From Array (DROP)
+Description: Returns array with rows or columns dropped from the start or end.
+   Use negative numbers to drop bottom rows or right most columns.
+Contributed By: Excel Robot (@ExcelRobot)
+Category: Array
+*/
+DROP = LAMBDA(array, rows, [columns],
+    LET(
+        row_count, ROWS(array) - ABS(rows),
+        col_count, IF(
+            ISOMITTED(columns),
+            COLUMNS(array),
+            COLUMNS(array) - ABS(columns)
+        ),
+        first_row, IF(rows < 0, 1, rows + 1),
+        first_col, IF(
+            ISOMITTED(columns),
+            1,
+            IF(columns < 0, 1, columns + 1)
+        ),
+        result, MAKEARRAY(
+            row_count,
+            col_count,
+            LAMBDA(i, j,
+                INDEX(array, i + first_row - 1, j + first_col - 1)
+            )
+        ),
+        result
+    )
+);
+
+/*
+Name: Choose Rows From Array (CHOOSEROWS)
+Description: Returns an array made up of the rows of the provided array 
+   specified by row numbers.
+Contributed By: Excel Robot (@ExcelRobot)
+Category: Array
+*/
+CHOOSEROWS = LAMBDA(array, row_num1, [row_num2], [row_num3], [row_num4], [row_num5], [row_num6], [row_num7], [row_num8], [row_num9], [row_num10],
+    LET(
+        t_1, tocol(row_num1),
+        t_2, IF(ISOMITTED(row_num2), t_1, VSTACK(t_1, tocol(row_num2))),
+        t_3, IF(ISOMITTED(row_num3), t_2, VSTACK(t_2, tocol(row_num3))),
+        t_4, IF(ISOMITTED(row_num4), t_3, VSTACK(t_3, tocol(row_num4))),
+        t_5, IF(ISOMITTED(row_num5), t_4, VSTACK(t_4, tocol(row_num5))),
+        t_6, IF(ISOMITTED(row_num6), t_5, VSTACK(t_5, tocol(row_num6))),
+        t_7, IF(ISOMITTED(row_num7), t_6, VSTACK(t_6, tocol(row_num7))),
+        t_8, IF(ISOMITTED(row_num8), t_7, VSTACK(t_7, tocol(row_num8))),
+        t_9, IF(ISOMITTED(row_num9), t_8, VSTACK(t_8, tocol(row_num9))),
+        rows_to_select, IF(ISOMITTED(row_num10), t_9, VSTACK(t_9, tocol(row_num10))),
+        row_cnt, ROWS(array),
+        index_list, MAKEARRAY(
+            ROWS(rows_to_select),
+            COLUMNS(array),
+            LAMBDA(i_pos, j_pos,
+                INDEX(rows_to_select, i_pos, 1) + (j_pos - 1) * row_cnt
+            )
+        ),
+        result, WRAPCOLS(
+            INDEX(TOCOL(array,,TRUE), TOCOL(index_list,,TRUE)),
+            ROWS(rows_to_select)
+        ),
+        result
+    )
+);
+
+/*
+Name: Choose Columns From Array (CHOOSECOLS)
+Description: Returns an array made up of the columns of the provided array 
+   specified by column numbers.
+Contributed By: Excel Robot (@ExcelRobot)
+Category: Array
+*/
+CHOOSECOLS = LAMBDA(array, col_num1, [col_num2], [col_num3], [col_num4], [col_num5], [col_num6], [col_num7], [col_num8], [col_num9], [col_num10],
+    LET(
+        t_1, TOCOL(col_num1),
+        t_2, IF(ISOMITTED(col_num2), t_1, VSTACK(t_1, TOCOL(col_num2))),
+        t_3, IF(ISOMITTED(col_num3), t_2, VSTACK(t_2, TOCOL(col_num3))),
+        t_4, IF(ISOMITTED(col_num4), t_3, VSTACK(t_3, TOCOL(col_num4))),
+        t_5, IF(ISOMITTED(col_num5), t_4, VSTACK(t_4, TOCOL(col_num5))),
+        t_6, IF(ISOMITTED(col_num6), t_5, VSTACK(t_5, TOCOL(col_num6))),
+        t_7, IF(ISOMITTED(col_num7), t_6, VSTACK(t_6, TOCOL(col_num7))),
+        t_8, IF(ISOMITTED(col_num8), t_7, VSTACK(t_7, TOCOL(col_num8))),
+        t_9, IF(ISOMITTED(col_num9), t_8, VSTACK(t_8, TOCOL(col_num9))),
+        cols_to_select, IF(
+            ISOMITTED(col_num10),
+            t_9,
+            VSTACK(t_9, TOCOL(col_num10))
+        ),
+        col_cnt, COLUMNS(array),
+        index_list, MAKEARRAY(
+            ROWS(array),
+            ROWS(cols_to_select),
+            LAMBDA(i_pos, j_pos,
+                INDEX(cols_to_select, j_pos, 1) + (i_pos - 1) * col_cnt
+            )
+        ),
+        result, WRAPROWS(
+            INDEX(TOCOL(array), TOCOL(index_list)),
+            ROWS(cols_to_select)
+        ),
+        result
+    )
+)
+;
+
+/*
+Name: Expand Array (EXPAND)
+Description: Expands the dimensions of an array to a specified size padding extra
+   space with #N/A! or optional specified value.
+Contributed By: Excel Robot (@ExcelRobot)
+Category: Array
+*/
+EXPAND = LAMBDA(array, rows, [columns], [pad_with],
+    LET(
+        row_count, MAX(rows, ROWS(array)),
+        col_count, IF(
+            ISOMITTED(columns),
+            COLUMNS(array),
+            MAX(columns, COLUMNS(array))
+        ),
+        max_row, ROWS(array),
+        max_col, COLUMNS(array),
+        missing, IF(ISOMITTED(pad_with), NA(), pad_with),
+        MAKEARRAY(
+            row_count,
+            col_count,
+            LAMBDA(i, j, IF(OR(i > max_row, j > max_col), missing, INDEX(array, i, j)))
+        )
+    )
+);
+
+REMOVEBLANKS =LAMBDA(array,LET(
+   \\LambdaName, "REMOVEBLANKS",
+   \\CommandName, "Remove Blanks",
+   \\Description, "Remove all blank rows and columns.",
+   \\Parameters, {"array","array of values to evaluate for blank rows and columns"},
+   \\Source, "Excel Robot",
+   nonblanks, (--ISBLANK(array)+(array="")),
+   nonblankColumns, FILTER(SEQUENCE(1,COLUMNS(nonblanks)),BYCOL(--nonblanks,LAMBDA(x,SUM(x)))<>0),
+   nonblankRows, FILTER(SEQUENCE(ROWS(nonblanks)),BYROW(--nonblanks,LAMBDA(x,SUM(x)))<>0),
+   result, CHOOSEROWS(CHOOSECOLS(IF(array="","",array),nonblankColumns),nonblankRows),
+   result
+   )
+);

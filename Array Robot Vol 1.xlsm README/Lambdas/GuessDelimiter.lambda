@@ -1,0 +1,20 @@
+GuessDelimiter =LAMBDA(array, LET(
+   \\LambdaName, "GuessDelimiter",
+   _Combine, TEXTJOIN(CHAR(10), TRUE, array),
+   _Letters, MID(_Combine, SEQUENCE(LEN(_Combine)), 1),
+   _IsLetter, MAP(_Letters, LAMBDA(x, AND(UPPER(x) >= "A", UPPER(x) <= "Z"))),
+   _IsDigit, MAP(_Letters, LAMBDA(x, AND(x >= "0", x <= "9"))),
+   _IsWhiteSpace, MAP(
+      _Letters,
+      LAMBDA(x, OR(CODE(x) = 32, CODE(x) = 9, CODE(x) = 10, CODE(x) = 13))
+   ),
+   _IsNeither, (_IsLetter + _IsDigit + _IsWhiteSpace) = 0,
+   _Symbols, FILTER(_Letters, _IsNeither),
+   _Ranked, SORTBY(
+      UNIQUE(_Symbols),
+      BYROW(TRANSPOSE(_Symbols) = UNIQUE(_Symbols), LAMBDA(x, SUM(N(x)))),
+      -1
+   ),
+   _Result, TAKE(_Ranked, 1),
+   _Result
+));

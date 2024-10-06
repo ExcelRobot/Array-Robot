@@ -1,0 +1,13 @@
+FillFromBelow = LAMBDA(array,[criteria], LET(
+   \\LambdaName, "FillFromBelow",
+   fnCriteria, IF(ISOMITTED(criteria), LAMBDA(x, x = ""), criteria),
+   _cols, SEQUENCE(1, COLUMNS(array)),
+   _rows, SEQUENCE(ROWS(array)),
+   fnIfBlank, LAMBDA(x, IF(x = "", "", x)),
+   fnFill, LAMBDA(vector,
+      SCAN(fnIfBlank(INDEX(vector, 1, 1)), vector, LAMBDA(s,x, IF(fnCriteria(x), s, x)))
+   ),
+   fnReverse, LAMBDA(vector, SORTBY(vector, _rows, -1)),
+   Result, Tile(_cols, LAMBDA(n, fnReverse(fnFill(fnReverse(CHOOSECOLS(array, n)))))),
+   Result
+));

@@ -1,0 +1,4 @@
+RunningTotal =LAMBDA(array,LET(    \\LambdaName, "RunningTotal",
+   res, SCAN(0,array,LAMBDA(s,a,s+a)),
+   res
+) );

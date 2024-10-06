@@ -1,0 +1,4 @@
+IsAllButOne =LAMBDA(array,[criterion],
+   SUM(--IF(ISOMITTED(criterion), array, MAP(array, criterion)))
+      = ROWS(array) * COLUMNS(array) - 1
+);

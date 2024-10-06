@@ -1,0 +1,3 @@
+IsExactlyOne =LAMBDA(array,[criterion],
+   SUM(--IF(ISOMITTED(criterion), array, MAP(array, criterion))) = 1
+);

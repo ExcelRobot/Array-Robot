@@ -1,0 +1,680 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s20">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="16" ss:Color="#000000"
+    ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s21">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#757171"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="14" ss:Color="#000000"
+    ss:Bold="1" ss:Italic="1"/>
+  </Style>
+  <Style ss:ID="s22">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="14" ss:Color="#000000"
+    ss:Bold="1" ss:Italic="1"/>
+  </Style>
+  <Style ss:ID="s24">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="14" ss:Color="#000000"
+    ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s25">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="12" ss:Color="#000000"
+    ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s26">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Italic="1"/>
+  </Style>
+  <Style ss:ID="s27">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s86">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#FFFFFF"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#FFFFFF"/>
+   </Borders>
+   <Interior ss:Color="#FCE4D6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s96">
+   <Interior ss:Color="#E2EFDA" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s97">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#FFFFFF"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#FFFFFF"/>
+   </Borders>
+   <Interior ss:Color="#F8CBAD" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s98">
+   <Interior ss:Color="#C6E0B4" ss:Pattern="Solid"/>
+  </Style>
+ </Styles>
+ <Names>
+  <NamedRange ss:Name="_xleta.COLUMNS" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xleta.IFERROR" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xleta.ISNA" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xleta.ISODD" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xleta.N" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xleta.NA" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xleta.ODD" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xleta.PRODUCT" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xleta.ROW" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xleta.ROWS" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xleta.TEXT" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xleta.TRANSPOSE" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.attribute_name" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.by_col" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.col_num" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.ColShift" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.columns_to_unpivot" ss:RefersTo="=#NAME?"
+   ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.criteria" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.criterion" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.exclude" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.has_headers" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.if_not_found" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.ignore_commas" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.metric_column_count" ss:RefersTo="=#NAME?"
+   ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.PadWith" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.remove_blanks" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.remove_columns" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.remove_rows" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.RowShift" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.search_mode" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.sort_order" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.to_first_blank" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.transpose_result" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlop.value_name" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.\\CommandName" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.\\Description" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.\\LambdaName" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.\\Parameters" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.\\Source" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._addDelimiter" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._AttributeLabel" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._chars" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._cols" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._columncount" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._columnIndex" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._ColumnNumbers" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._ColumnOrder" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._ColumnsToUnpivot" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Combine" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._compare" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._countif" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._counts" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._criterioncount" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._D1Cols" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._D1Rows" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._D2Cols" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._D2Rows" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Data1" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Data2" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._end" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._entirecol" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._eq" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._expand" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._filtered" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._FirstColumnToUnpivot" ss:RefersTo="=#NAME?"
+   ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._firstrow" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._flattencriterion" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._flip" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._FullOuterJoin" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._HasHeaders" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._include" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._IncludeColumns" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._included" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._index" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._instancematrix" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._instances" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._IsArray" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._iscriterionmatch" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._IsDigit" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._IsLetter" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._ismatch" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._IsNeither" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._isNumber" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._IsWhiteSpace" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._keep" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._lastrow" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Letters" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._match" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._names" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._NnonblankRows" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Nnonblanks" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._nonblankColumns" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._nonblankRows" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._nonblanks" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._onblankColumns" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._OtherColumns" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._OuterJoinedData" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Ranked" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._RemoveBlanks" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._ReorderColumns" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._replaced" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._reshapearray" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._reshapecriterion" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._resize" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._resized" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._result" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._rowcount" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._rowIndex" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._rows" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._S" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._seq" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Sequ" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Seque" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Sequen" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Sequenc" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Sequence" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._size" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Sp" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Spl" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Spli" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Splic" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._split" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._stack" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._start" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Symbols" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._t" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._to" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._tocol" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._ton" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._tonu" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._tonum" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._tonumb" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._tonumbe" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._tonumber" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._toNumbers" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Trans" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Transp" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Transpo" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Transpos" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._Transpose" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._unique" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._UnpivotColumnCount" ss:RefersTo="=#NAME?"
+   ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._UnpivotColumns" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._ValueLabel" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._WithHeader" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm._WithValues" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.a" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.aggs" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.ar" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.arr" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.arra" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.array" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.AsCol" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.attribute_name" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.boolean_vector" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.by_col" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.c" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.c_indexes" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.catOutliers" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.cell" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.cnt" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.co_indexes" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.codes" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.col" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.col_index" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.col_indexes" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.col_num" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.ColCount" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.ColShift" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.colu_indexes" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.colum_indexes" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.column_indexes" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.column_value" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.columns_to_unpivot" ss:RefersTo="=#NAME?"
+   ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.criteria" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.criterion" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.data" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.exclude" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.f" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.filter_values" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.firstcol" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.firstrow" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fnCriteria" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fnFill" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fnIfBlank" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fnIsDigit" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fnMultiCriterionMatch" ss:RefersTo="=#NAME?"
+   ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fnMultiKeyAgg" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fnReverse" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fnSimpleAgg" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fnSingle" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fnSingleCriterionMatch" ss:RefersTo="=#NAME?"
+   ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fnSingleRowJoin" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fnSingleRowLookup" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fnSingleRowMatch" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fnSp" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fnSpl" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fnSpli" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fnSplit" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fnTranspose" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.freq" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fTranspose" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.function" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fxCriteria" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fxFill" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fxFillBlanks" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.fxReverse" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.has_headers" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.headerRow" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.i" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.if_not_found" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.ignore_commas" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.input" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.IsCategorical" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.IsComma" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.IsPeriod" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.j" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.keyData" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.keys" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.left_keys" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.letters" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.list" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.lookup_array" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.lookup_row" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.lookup_table" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.match_array" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.match_row" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.matrix" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.metric_column_count" ss:RefersTo="=#NAME?"
+   ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.metricColumnCount" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.metrics" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.n" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.nextCodes" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.nonblankColumns" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.nonblankRows" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.nonblanks" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.Offset" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.Pad" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.PadColumns" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.PadRows" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.PadWith" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.pair_of_integers" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.param" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.params" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.pct" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.pctile" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.priorCodes" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.r" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.Reference" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.Remaining" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.remove_blanks" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.remove_columns" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.remove_rows" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.res" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.Result" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.right_array" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.row_index" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.row_indexes" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.row_num" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.row_value" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.RowCount" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.RowShift" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.s" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.search_mode" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.sort_order" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.stack" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.stacker" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.t1_indexes" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.t1_norm" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.t2_indexes" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.t2_norm" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.table" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.table1" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.table2" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.text" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.text_" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.text_v" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.text_ve" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.text_vec" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.text_vect" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.text_vecto" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.text_vector" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.text_ves" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.text_vest" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.to_first_blank" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.transpose_result" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.two_col_array" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.unique" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.val" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.value_if_blank" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.value_name" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.valueOutliers" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.vector" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.x" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="_xlpm.y" ss:RefersTo="=#NAME?" ss:Hidden="1"/>
+  <NamedRange ss:Name="CountEachUniqueValue"
+   ss:RefersTo="=LAMBDA(array,[exclude], LET(&#10;   \\LambdaName, &quot;CountUniqueValues&quot;,&#10;   \\CommandName, &quot;Count Unique Values&quot;,&#10;   \\Description, &quot;Returns counts of each unique value in array.&quot;,&#10;   _unique, UNIQUE(TOCOL(IF(array = &quot;&quot;, &quot;&quot;, array))),&#10;   _include, BYROW(_unique &lt;&gt; TOROW(exclude), LAMBDA(x, PRODUCT(N(x)))),&#10;   _filtered, IF(ISOMITTED(exclude), _unique, FILTER(_unique, _include)),&#10;   _countif, MAP(_filtered, LAMBDA(x, SUM(--(array = x)))),&#10;   Result, SORTBY(HSTACK(_filtered, _countif), _countif, -1),&#10;   Result&#10;))"/>
+  <NamedRange ss:Name="CrossJoin"
+   ss:RefersTo="=LAMBDA(table1,table2,[has_headers], LET(&#10;   _HasHeaders, IF(ISOMITTED(has_headers),TRUE,has_headers),&#10;   _Data1, IF(_HasHeaders,DROP(table1,1),table1),&#10;   _Data2, IF(_HasHeaders,DROP(table2,1),table2),&#10;   _D1Rows, ROWS(_Data1),&#10;   _D1Cols, COLUMNS(_Data1),&#10;   _D2Rows, ROWS(_Data2),&#10;   _D2Cols, COLUMNS(_Data2),&#10;   _OuterJoinedData, MAKEARRAY(_D1Rows * _D2Rows, _D1Cols + _D2Cols,LAMBDA(i,j,&#10;      IF(j &lt;= _D1Cols, INDEX(_Data1, ROUNDUP(i / _D2Rows, 0), j), INDEX(_Data2, MOD(i - 1, _D2Rows)+1, j - _D1Cols)))),&#10;   _WithHeader, IF(_HasHeaders,VSTACK(HSTACK(TAKE(table1, 1), TAKE(table2, 1)), _OuterJoinedData),_OuterJoinedData),&#10;   _WithHeader&#10;))"/>
+  <NamedRange ss:Name="GuessDelimiter"
+   ss:RefersTo="=LAMBDA(array, LET(&#10;   \\LambdaName, &quot;GuessDelimiter&quot;,&#10;   _Combine, TEXTJOIN(CHAR(10), TRUE, array),&#10;   _Letters, MID(_Combine, SEQUENCE(LEN(_Combine)), 1),&#10;   _IsLetter, MAP(_Letters, LAMBDA(x, AND(UPPER(x) &gt;= &quot;A&quot;, UPPER(x) &lt;= &quot;Z&quot;))),&#10;   _IsDigit, MAP(_Letters, LAMBDA(x, AND(x &gt;= &quot;0&quot;, x &lt;= &quot;9&quot;))),&#10;   _IsWhiteSpace, MAP(&#10;      _Letters,&#10;      LAMBDA(x, OR(CODE(x) = 32, CODE(x) = 9, CODE(x) = 10, CODE(x) = 13))&#10;   ),&#10;   _IsNeither, (_IsLetter + _IsDigit + _IsWhiteSpace) = 0,&#10;   _Symbols, FILTER(_Letters, _IsNeither),&#10;   _Ranked, SORTBY(&#10;      UNIQUE(_Symbols),&#10;      BYROW(TRANSPOSE(_Symbols) = UNIQUE(_Symbols), LAMBDA(x, SUM(N(x)))),&#10;      -1&#10;   ),&#10;   _Result, TAKE(_Ranked, 1),&#10;   _Result&#10;))"/>
+  <NamedRange ss:Name="IfBlank"
+   ss:RefersTo="=LAMBDA(array,value_if_blank,MAP(array,LAMBDA(val,IF(ISBLANK(val),value_if_blank,val))))"/>
+  <NamedRange ss:Name="IsAll"
+   ss:RefersTo="=LAMBDA(array,[criterion],&#10;   AND(IF(ISOMITTED(criterion), array, MAP(array, criterion)))&#10;)"/>
+  <NamedRange ss:Name="IsAllButOne"
+   ss:RefersTo="=LAMBDA(array,[criterion],&#10;   SUM(--IF(ISOMITTED(criterion), array, MAP(array, criterion)))&#10;      = ROWS(array) * COLUMNS(array) - 1&#10;)"/>
+  <NamedRange ss:Name="IsAny"
+   ss:RefersTo="=LAMBDA(array,[criterion],&#10;   OR(IF(ISOMITTED(criterion), array, MAP(array, criterion)))&#10;)"/>
+  <NamedRange ss:Name="IsExactlyOne"
+   ss:RefersTo="=LAMBDA(array,[criterion],&#10;   SUM(--IF(ISOMITTED(criterion), array, MAP(array, criterion))) = 1&#10;)"/>
+  <NamedRange ss:Name="IsExactlyTwo"
+   ss:RefersTo="=LAMBDA(array,[criterion],&#10;   SUM(--IF(ISOMITTED(criterion), array, MAP(array, criterion))) = 2&#10;)"/>
+  <NamedRange ss:Name="IsNone"
+   ss:RefersTo="=LAMBDA(array,[criterion],&#10;   SUM(--IF(ISOMITTED(criterion), array, MAP(array, criterion))) = 0&#10;)"/>
+  <NamedRange ss:Name="IsOne"
+   ss:RefersTo="= LAMBDA(array,LET(&#10;   \\LambdaName, &quot;IsOne&quot;,&#10;array=1)&#10;)"/>
+  <NamedRange ss:Name="IsWhiteSpace"
+   ss:RefersTo="=LAMBDA(letters, LET(&#10;   \\LambdaName, &quot;IsWhiteSpace&quot;,&#10;   MAP(&#10;      &quot;&quot; &amp; letters,&#10;      LAMBDA(x, OR(CODE(x) = 32, CODE(x) = 9, CODE(x) = 10, CODE(x) = 13))&#10;   )&#10;))"/>
+  <NamedRange ss:Name="IsZero"
+   ss:RefersTo="=LAMBDA(array,LET(&#10;   \\LambdaName, &quot;IsZero&quot;,&#10;((array=0)*(array&lt;&gt;&quot;&quot;))&lt;&gt;0)&#10;)"/>
+  <NamedRange ss:Name="RemoveBlanks"
+   ss:RefersTo="=LAMBDA(array,[remove_rows],[remove_columns], LET(&#10;   \\LambdaName, &quot;REMOVEBLANKS&quot;,&#10;   \\CommandName, &quot;Remove Blanks&quot;,&#10;   \\Description, &quot;Remove all blank rows and columns.&quot;,&#10;   \\Parameters, {&quot;array&quot;,&quot;array of values to evaluate for blank rows and columns&quot;},&#10;   \\Source, &quot;Excel Robot&quot;,&#10;   _NonBlanks, (--ISBLANK(array) + (array = &quot;&quot;)) = 0,&#10;   _NonBlankColumns, FILTER(&#10;      SEQUENCE(1, COLUMNS(_NonBlanks)),&#10;      (BYCOL(--_NonBlanks, LAMBDA(x, SUM(x))) &lt;&gt; 0)&#10;         + IF(ISOMITTED(remove_columns), 0, 1 - remove_columns)&#10;   ),&#10;   _NonBlankRows, FILTER(&#10;      SEQUENCE(ROWS(_NonBlanks)),&#10;      (BYROW(--_NonBlanks, LAMBDA(x, SUM(x))) &lt;&gt; 0) + IF(ISOMITTED(remove_rows), 0, 1 - remove_rows)&#10;   ),&#10;   _Result, CHOOSEROWS(CHOOSECOLS(IF(array = &quot;&quot;, &quot;&quot;, array), _NonBlankColumns), _NonBlankRows),&#10;   _Result&#10;))"/>
+  <NamedRange ss:Name="RemoveCols"
+   ss:RefersTo="=LAMBDA(array,column_indexes, LET(&#10;   \\LambdaName, &quot;RemoveCols&quot;,&#10;   \\CommandName, &quot;Remove Columns Of Array&quot;,&#10;   \\Description, &quot;Removes specified columns of array using RemoveCols lambda.&quot;,&#10;   _Seq, SEQUENCE(COLUMNS(array)),&#10;   _Keep, ISERROR(MATCH(_Seq, TOROW(column_indexes), 0)),&#10;   _Included, FILTER(_Seq, _Keep, TRUE),&#10;   _Result, CHOOSECOLS(array, _Included),&#10;   _Result&#10;))"/>
+  <NamedRange ss:Name="RemoveRows"
+   ss:RefersTo="=LAMBDA(array,row_indexes, LET(&#10;   \\LambdaName, &quot;RemoveRows&quot;,&#10;   \\CommandName, &quot;Remove Rows Of Array&quot;,&#10;   \\Description, &quot;Removes specified rows of array using RemoveRows lambda.&quot;,&#10;   _Seq, SEQUENCE(ROWS(array)),&#10;   _Keep, ISERROR(MATCH(_Seq, TOROW(row_indexes), 0)),&#10;   _Included, FILTER(_Seq, _Keep, TRUE),&#10;   _Result, CHOOSEROWS(array, _Included),&#10;   _Result&#10;))"/>
+  <NamedRange ss:Name="ReplaceZerosWithBlanks"
+   ss:RefersTo="=LAMBDA(array,LET(&#10;   \\LambdaName, &quot;ReplaceZerosWithBlanks&quot;,&#10;   \\CommandName, &quot;Replace Zeros With Blanks&quot;,&#10;   \\Description, &quot;Returns the passed array but with blanks where there were zeros.&quot;,&#10;IF(array=0,&quot;&quot;,array))&#10;)"/>
+  <NamedRange ss:Name="ReverseColumns"
+   ss:RefersTo="=LAMBDA(array,LET(&#10;   \\LambdaName, &quot;ReverseColumns&quot;,&#10;   \\CommandName, &quot;Reverse Columns&quot;,&#10;   \\Description, &quot;Returns an array in reverse column order.&quot;,&#10;SORTBY(array,SEQUENCE(1,COLUMNS(array)),-1))&#10;)"/>
+  <NamedRange ss:Name="ReverseRows"
+   ss:RefersTo="=LAMBDA(array,LET(&#10;   \\LambdaName, &quot;ReverseRows&quot;,&#10;   \\CommandName, &quot;Reverse Rows&quot;,&#10;   \\Description, &quot;Returns array in reverse row order.&quot;,&#10;SORTBY(array,SEQUENCE(ROWS(array)),-1))&#10;)"/>
+  <NamedRange ss:Name="RunningProduct"
+   ss:RefersTo="=LAMBDA(array,LET(&#10;   \\LambdaName, &quot;RunningProduct&quot;,&#10;   \\CommandName, &quot;Running Product&quot;,&#10;   \\Description, &quot;Returns vector of running product.&quot;,&#10;   res, SCAN(1,array,LAMBDA(s,a,s*a)),&#10;   res&#10;) )"/>
+  <NamedRange ss:Name="RunningTotal"
+   ss:RefersTo="=LAMBDA(array,LET(    \\LambdaName, &quot;RunningTotal&quot;,&#10;   res, SCAN(0,array,LAMBDA(s,a,s+a)),&#10;   res&#10;) )"/>
+  <NamedRange ss:Name="RunningTotalsByColumn"
+   ss:RefersTo="=LAMBDA(array,LET(    \\LambdaName, &quot;RunningTotalsByColumn&quot;,    Result, MAKEARRAY(ROWS(array),COLUMNS(array),LAMBDA(x,y,SUM(INDEX(array,SEQUENCE(x),y)))),    Result    ) )"/>
+  <NamedRange ss:Name="RunningTotalsByRow"
+   ss:RefersTo="=LAMBDA(array,LET(    \\LambdaName, &quot;RunningTotalsByRow&quot;,&#10;   Result, MAKEARRAY(ROWS(array),COLUMNS(array),LAMBDA(x,y,SUM(INDEX(array,x,SEQUENCE(1,y))))),&#10;   Result&#10;))"/>
+  <NamedRange ss:Name="ShowFormulas"
+   ss:RefersTo="=LAMBDA(Reference, LET(&#10;   c, Reference,&#10;   f, TOCOL(ADDRESS(ROW(c), COLUMN(c), 4) &amp; &quot;: &quot; &amp; FORMULATEXT(c), 3),&#10;   r, DROP(REDUCE({&quot;&quot;}, f, LAMBDA(s,x, VSTACK(s, TEXTSPLIT(x, , &quot;&#10;&quot;)))), 1),&#10;   r&#10;))"/>
+  <NamedRange ss:Name="SumByColumn"
+   ss:RefersTo="=LAMBDA(array,BYCOL(array,LAMBDA(col,SUM(col))) )"/>
+  <NamedRange ss:Name="SumByRow"
+   ss:RefersTo="=LAMBDA(array,BYROW(array,LAMBDA(col,SUM(col))) )"/>
+ </Names>
+ <Worksheet ss:Name="Boolean">
+  <Table ss:ExpandedColumnCount="16" ss:ExpandedRowCount="41"
+   ss:DefaultRowHeight="15">
+   <Column ss:AutoFitWidth="0" ss:Width="14.25"/>
+   <Row ss:Height="21">
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Array Robot Volume 1</Data></Cell>
+   </Row>
+   <Row ss:Height="18.75">
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Boolean Lambdas</Data></Cell>
+   </Row>
+   <Row ss:Index="4" ss:Height="18.75" ss:StyleID="s21">
+    <Cell ss:StyleID="s22"/>
+    <Cell><Data ss:Type="String">Boolean Operations</Data></Cell>
+   </Row>
+   <Row ss:Index="6" ss:Height="15.75">
+    <Cell ss:Index="2" ss:StyleID="s25"><Data ss:Type="String">IsAll(array, [criterion])</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s26"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><I><Font html:Color="#000000">Returns TRUE if all elements of </Font></I><B><I><Font
+         html:Color="#000000">array</Font></I></B><I><Font html:Color="#000000"> are TRUE or meet </Font></I><B><I><Font
+         html:Color="#000000">criterion</Font></I></B><I><Font html:Color="#000000"> if specified.</Font></I></ss:Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:Index="2" ss:StyleID="s25"><Data ss:Type="String">IsAllButOne(array, [criterion])</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s26"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><I><Font html:Color="#000000">Returns TRUE if all but one elements of </Font></I><B><I><Font
+         html:Color="#000000">array</Font></I></B><I><Font html:Color="#000000"> are TRUE or meet </Font></I><B><I><Font
+         html:Color="#000000">criterion</Font></I></B><I><Font html:Color="#000000"> if specified.</Font></I></ss:Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:Index="2" ss:StyleID="s25"><Data ss:Type="String">IsAny(array, [criterion])</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s26"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><I><Font html:Color="#000000">Returns TRUE if any elements of </Font></I><B><I><Font
+         html:Color="#000000">array</Font></I></B><I><Font html:Color="#000000"> are TRUE or meet </Font></I><B><I><Font
+         html:Color="#000000">criterion</Font></I></B><I><Font html:Color="#000000"> if specified.</Font></I></ss:Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:Index="2" ss:StyleID="s25"><Data ss:Type="String">IsExactlyOne(array, [criterion])</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s26"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><I><Font html:Color="#000000">Returns TRUE if exactly one element of </Font></I><B><I><Font
+         html:Color="#000000">array</Font></I></B><I><Font html:Color="#000000"> are TRUE or meet </Font></I><B><I><Font
+         html:Color="#000000">criterion</Font></I></B><I><Font html:Color="#000000"> if specified.</Font></I></ss:Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:Index="2" ss:StyleID="s25"><Data ss:Type="String">IsExactlyTwo(array, [criterion])</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s26"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><I><Font html:Color="#000000">Returns TRUE if exactly two elements of </Font></I><B><I><Font
+         html:Color="#000000">array</Font></I></B><I><Font html:Color="#000000"> are TRUE or meet </Font></I><B><I><Font
+         html:Color="#000000">criterion</Font></I></B><I><Font html:Color="#000000"> if specified.</Font></I></ss:Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:Index="2" ss:StyleID="s25"><Data ss:Type="String">IsNone(array, [criterion])</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s26"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><I><Font html:Color="#000000">Returns TRUE if none of the elements of </Font></I><B><I><Font
+         html:Color="#000000">array</Font></I></B><I><Font html:Color="#000000"> are TRUE or meet </Font></I><B><I><Font
+         html:Color="#000000">criterion</Font></I></B><I><Font html:Color="#000000"> if specified.</Font></I></ss:Data></Cell>
+   </Row>
+   <Row ss:Index="19" ss:StyleID="s27">
+    <Cell ss:Index="2"><Data ss:Type="String">array1</Data></Cell>
+    <Cell ss:Index="6"><Data ss:Type="String">array2</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="String">array3</Data></Cell>
+    <Cell ss:Index="14"><Data ss:Type="String">array4</Data></Cell>
+   </Row>
+   <Row ss:Index="21">
+    <Cell ss:Index="2" ss:StyleID="s86" ss:ArrayRange="RC:RC[2]"
+     ss:Formula="={FALSE,FALSE,FALSE}"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="6" ss:StyleID="s86" ss:ArrayRange="RC:RC[2]"
+     ss:Formula="={FALSE,TRUE,FALSE}"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="10" ss:StyleID="s97" ss:ArrayRange="RC:RC[2]"
+     ss:Formula="={TRUE,FALSE,TRUE}"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:Index="14" ss:StyleID="s97" ss:ArrayRange="RC:RC[2]"
+     ss:Formula="={TRUE,TRUE,TRUE}"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Boolean">1</Data></Cell>
+   </Row>
+   <Row ss:Index="23" ss:StyleID="s27">
+    <Cell ss:Index="2"><Data ss:Type="String">description</Data></Cell>
+    <Cell ss:Index="5"><Data ss:Type="String">function [f]</Data></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">f(array1)</Data></Cell>
+    <Cell ss:Index="9"><Data ss:Type="String">f(array2)</Data></Cell>
+    <Cell ss:Index="11"><Data ss:Type="String">f(array3)</Data></Cell>
+    <Cell ss:Index="13"><Data ss:Type="String">f(array4)</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String">formulas</Data></Cell>
+   </Row>
+   <Row ss:Index="25">
+    <Cell ss:Index="2"><Data ss:Type="String">Are All True?</Data></Cell>
+    <Cell ss:Index="5"><Data ss:Type="String">IsAll</Data></Cell>
+    <Cell ss:Index="7" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsAll(R[-4]C[-5]#)"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="9" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsAll(R[-4]C[-3]#)"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="11" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsAll(R[-4]C[-1]#)"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="13" ss:StyleID="s98" ss:ArrayRange="RC"
+     ss:Formula="=IsAll(R[-4]C[1])"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:Index="15" ss:ArrayRange="RC:R[5]C"
+     ss:Formula="=ShowFormulas(RC[-8]:R[5]C[-8])"><Data ss:Type="String">G25: =IsAll(B21#)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Are All But One True?</Data></Cell>
+    <Cell ss:Index="5"><Data ss:Type="String">IsAllButOne</Data></Cell>
+    <Cell ss:Index="7" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsAllButOne(R[-5]C[-5]#)"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="9" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsAllButOne(R[-5]C[-3]#)"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="11" ss:StyleID="s98" ss:ArrayRange="RC"
+     ss:Formula="=IsAllButOne(R[-5]C[-1]#)"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:Index="13" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsAllButOne(R[-5]C[1])"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String">G26: =IsAllButOne(B21#)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Are Any True?</Data></Cell>
+    <Cell ss:Index="5"><Data ss:Type="String">IsAny</Data></Cell>
+    <Cell ss:Index="7" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsAny(R[-6]C[-5]#)"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="9" ss:StyleID="s98" ss:ArrayRange="RC"
+     ss:Formula="=IsAny(R[-6]C[-3]#)"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:Index="11" ss:StyleID="s98" ss:ArrayRange="RC"
+     ss:Formula="=IsAny(R[-6]C[-1]#)"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:Index="13" ss:StyleID="s98" ss:ArrayRange="RC"
+     ss:Formula="=IsAny(R[-6]C[1])"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String">G27: =IsAny(B21#)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Is Exactly One True?</Data></Cell>
+    <Cell ss:Index="5"><Data ss:Type="String">IsExactlyOne</Data></Cell>
+    <Cell ss:Index="7" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsExactlyOne(R[-7]C[-5]#)"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="9" ss:StyleID="s98" ss:ArrayRange="RC"
+     ss:Formula="=IsExactlyOne(R[-7]C[-3]#)"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:Index="11" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsExactlyOne(R[-7]C[-1]#)"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="13" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsExactlyOne(R[-7]C[1]#)"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String">G28: =IsExactlyOne(B21#)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Are Exactly Two True?</Data></Cell>
+    <Cell ss:Index="5"><Data ss:Type="String">IsExactlyTwo</Data></Cell>
+    <Cell ss:Index="7" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsExactlyTwo(R[-8]C[-5]#)"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="9" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsExactlyTwo(R[-8]C[-3]#)"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="11" ss:StyleID="s98" ss:ArrayRange="RC"
+     ss:Formula="=IsExactlyTwo(R[-8]C[-1]#)"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:Index="13" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsExactlyTwo(R[-8]C[1]#)"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String">G29: =IsExactlyTwo(B21#)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Are None True?</Data></Cell>
+    <Cell ss:Index="5"><Data ss:Type="String">IsNone</Data></Cell>
+    <Cell ss:Index="7" ss:StyleID="s98" ss:ArrayRange="RC"
+     ss:Formula="=IsNone(R[-9]C[-5]#)"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:Index="9" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsNone(R[-9]C[-3]#)"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="11" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsNone(R[-9]C[-1]#)"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="13" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsNone(R[-9]C[1]#)"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String">G30: =IsNone(B21#)</Data></Cell>
+   </Row>
+   <Row ss:Index="33">
+    <Cell ss:Index="2" ss:StyleID="s27"><Data ss:Type="String">array1</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">array2</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"/>
+   </Row>
+   <Row ss:Index="35">
+    <Cell ss:Index="2" ss:StyleID="s86" ss:ArrayRange="RC:RC[2]"
+     ss:Formula="={3,4,5}"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:Index="6" ss:StyleID="s86" ss:ArrayRange="RC:RC[2]"
+     ss:Formula="={9,11,13}"><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">11</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">13</Data></Cell>
+   </Row>
+   <Row ss:Index="37" ss:StyleID="s27">
+    <Cell ss:Index="2"><Data ss:Type="String">description</Data></Cell>
+    <Cell ss:Index="6"><Data ss:Type="String">function [f]</Data></Cell>
+    <Cell ss:Index="8"><Data ss:Type="String">f(array1)</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="String">f(array2)</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="String">formulas</Data></Cell>
+   </Row>
+   <Row ss:Index="39">
+    <Cell ss:Index="2"><Data ss:Type="String">Are All Odd?</Data></Cell>
+    <Cell ss:Index="6"><Data ss:Type="String">IsAll</Data></Cell>
+    <Cell ss:Index="8" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsAll(R[-4]C[-6]#,LAMBDA(x,ISODD(x)))"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="10" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsAll(R[-4]C[-4]#,LAMBDA(x,ISODD(x)))"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:Index="12" ss:ArrayRange="RC:R[2]C"
+     ss:Formula="=ShowFormulas(RC[-4]:R[2]C[-4])"><Data ss:Type="String">H39: =IsAll(B35#,LAMBDA(x,ISODD(x)))</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Are Any Greater Than 10?</Data></Cell>
+    <Cell ss:Index="6"><Data ss:Type="String">IsAny</Data></Cell>
+    <Cell ss:Index="8" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsAny(R[-5]C[-6]#,LAMBDA(x,x&gt;10))"><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="10" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsAny(R[-5]C[-4]#,LAMBDA(x,x&gt;10))"><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="String">H40: =IsAny(B35#,LAMBDA(x,x&gt;10))</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="String">Is Exactly One Divisible By 2?</Data></Cell>
+    <Cell ss:Index="6"><Data ss:Type="String">IsExactlyOne</Data></Cell>
+    <Cell ss:Index="8" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsExactlyOne(R[-6]C[-6]#,LAMBDA(x,x/2=TRUNC(x/2)))"><Data
+      ss:Type="Boolean">1</Data></Cell>
+    <Cell ss:Index="10" ss:StyleID="s96" ss:ArrayRange="RC"
+     ss:Formula="=IsExactlyOne(R[-6]C[-4]#,LAMBDA(x,x/2=TRUNC(x/2)))"><Data
+      ss:Type="Boolean">0</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="String">H41: =IsExactlyOne(B35#,LAMBDA(x,x/2=TRUNC(x/2)))</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>

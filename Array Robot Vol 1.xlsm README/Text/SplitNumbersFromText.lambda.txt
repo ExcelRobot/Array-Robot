@@ -1,0 +1,29 @@
+SplitNumbersFromText = LAMBDA(text_vector,[ignore_commas], LET(
+   \\LambdaName, "SplitNumbersFromText",
+   fnSplit, LAMBDA(text,[ignore_commas],[transpose_result], LET(
+      _chars, MID(text, SEQUENCE(LEN(text)), 1),
+      _isNumber, LET(
+         codes, CODE(_chars),
+         priorCodes, VSTACK("", DROP(codes, -1)),
+         nextCodes, VSTACK(DROP(codes, 1), ""),
+         fnIsDigit, LAMBDA(x, (x >= CODE("0")) * (x <= CODE("9")) = 1),
+         IsPeriod, codes = CODE("."),
+         IsComma, (codes = CODE(",")) * ((ISOMITTED(ignore_commas) + (ignore_commas = FALSE))) <> 0,
+         fnIsDigit(codes) + (IsPeriod + IsComma) * fnIsDigit(priorCodes) * fnIsDigit(nextCodes)
+      ),
+      _flip, VSTACK(DROP(_isNumber, 1) <> DROP(_isNumber, -1), FALSE),
+      _addDelimiter, _chars & IF(_flip, "‡", ""),
+      _split, TEXTSPLIT(CONCAT(_addDelimiter), "‡"),
+      _toNumbers, IFERROR(--_split, _split),
+      _result, IF(transpose_result, TRANSPOSE(_toNumbers), _toNumbers),
+      _result
+   )),
+   _Transpose, COLUMNS(text_vector) <> 1,
+   _IsArray, TYPE(text_vector) = 64,
+   _Result, IF(
+      _IsArray,
+      IFNA(Tile(text_vector, LAMBDA(x, fnSplit(x, ignore_commas, _Transpose))), ""),
+      fnSplit(text_vector, ignore_commas, FALSE)
+   ),
+   _Result
+));

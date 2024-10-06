@@ -1,0 +1,1 @@
+IfBlank =LAMBDA(array,value_if_blank,MAP(array,LAMBDA(val,IF(ISBLANK(val),value_if_blank,val))));

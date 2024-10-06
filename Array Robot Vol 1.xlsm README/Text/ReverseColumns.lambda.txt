@@ -1,0 +1,6 @@
+ReverseColumns = LAMBDA(array,LET(
+   \\LambdaName, "ReverseColumns",
+   \\CommandName, "Reverse Columns",
+   \\Description, "Returns an array in reverse column order.",
+SORTBY(array,SEQUENCE(1,COLUMNS(array)),-1))
+);

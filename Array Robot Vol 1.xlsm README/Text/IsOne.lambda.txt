@@ -1,0 +1,4 @@
+IsOne =  LAMBDA(array,LET(
+   \\LambdaName, "IsOne",
+array=1)
+);

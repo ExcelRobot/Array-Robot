@@ -1,0 +1,10 @@
+{
+  "Connections": [
+    {
+      "ConnectionString": "Lambda Robot.xlam",
+      "Name": "Lambda Robot",
+      "Description": "Lambda Robot command collection.",
+      "Type": "ExcelWorkbookConnection"
+    }
+  ]
+}

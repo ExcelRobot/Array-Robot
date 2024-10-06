@@ -1,0 +1,3 @@
+IsAll =LAMBDA(array,[criterion],
+   AND(IF(ISOMITTED(criterion), array, MAP(array, criterion)))
+);

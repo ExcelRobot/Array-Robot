@@ -1,0 +1,4 @@
+IsZero = LAMBDA(array,LET(
+   \\LambdaName, "IsZero",
+((array=0)*(array<>""))<>0)
+);

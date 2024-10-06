@@ -1,0 +1,13 @@
+CrossJoin =LAMBDA(table1,table2,[has_headers], LET(
+   _HasHeaders, IF(ISOMITTED(has_headers),TRUE,has_headers),
+   _Data1, IF(_HasHeaders,DROP(table1,1),table1),
+   _Data2, IF(_HasHeaders,DROP(table2,1),table2),
+   _D1Rows, ROWS(_Data1),
+   _D1Cols, COLUMNS(_Data1),
+   _D2Rows, ROWS(_Data2),
+   _D2Cols, COLUMNS(_Data2),
+   _OuterJoinedData, MAKEARRAY(_D1Rows * _D2Rows, _D1Cols + _D2Cols,LAMBDA(i,j,
+      IF(j <= _D1Cols, INDEX(_Data1, ROUNDUP(i / _D2Rows, 0), j), INDEX(_Data2, MOD(i - 1, _D2Rows)+1, j - _D1Cols)))),
+   _WithHeader, IF(_HasHeaders,VSTACK(HSTACK(TAKE(table1, 1), TAKE(table2, 1)), _OuterJoinedData),_OuterJoinedData),
+   _WithHeader
+));

@@ -1,0 +1,7 @@
+RunningProduct =LAMBDA(array,LET(
+   \\LambdaName, "RunningProduct",
+   \\CommandName, "Running Product",
+   \\Description, "Returns vector of running product.",
+   res, SCAN(1,array,LAMBDA(s,a,s*a)),
+   res
+) );

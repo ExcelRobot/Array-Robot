@@ -1,0 +1,3 @@
+IsAny =LAMBDA(array,[criterion],
+   OR(IF(ISOMITTED(criterion), array, MAP(array, criterion)))
+);

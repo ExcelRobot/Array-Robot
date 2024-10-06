@@ -1,0 +1,6 @@
+ReplaceZerosWithBlanks = LAMBDA(array,LET(
+   \\LambdaName, "ReplaceZerosWithBlanks",
+   \\CommandName, "Replace Zeros With Blanks",
+   \\Description, "Returns the passed array but with blanks where there were zeros.",
+IF(array=0,"",array))
+);

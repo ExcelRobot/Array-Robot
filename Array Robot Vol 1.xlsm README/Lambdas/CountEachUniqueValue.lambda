@@ -1,0 +1,14 @@
+/*
+Returns counts of each unique value in array.  
+*/
+CountEachUniqueValue =LAMBDA(array,[exclude], LET(
+   \\LambdaName, "CountUniqueValues",
+   \\CommandName, "Count Unique Values",
+   \\Description, "Returns counts of each unique value in array.",
+   _unique, UNIQUE(TOCOL(IF(array = "", "", array))),
+   _include, BYROW(_unique <> TOROW(exclude), LAMBDA(x, PRODUCT(N(x)))),
+   _filtered, IF(ISOMITTED(exclude), _unique, FILTER(_unique, _include)),
+   _countif, MAP(_filtered, LAMBDA(x, SUM(--(array = x)))),
+   Result, SORTBY(HSTACK(_filtered, _countif), _countif, -1),
+   Result
+));

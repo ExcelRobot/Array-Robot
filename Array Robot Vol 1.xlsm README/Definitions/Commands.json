@@ -1,0 +1,1856 @@
+{
+  "Commands": [
+    {
+      "Name": "Are All True By Column?",
+      "Description": "Wrap with formula to return AND of each column.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "at",
+        "atc",
+        "atbc"
+      ],
+      "Formula": "=BYCOL([[ActiveCell::Formula]],LAMBDA(x,AND(x)))",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Are All True By Row?",
+      "Description": "Wrap with formula to return AND of each row.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "at",
+        "atr",
+        "atbr"
+      ],
+      "Formula": "=BYROW([[ActiveCell::Formula]],LAMBDA(x,AND(x)))",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Are All True?",
+      "Description": "Wrap with formula with AND function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "and"
+      ],
+      "Formula": "=AND([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Are Some/Any True By Column?",
+      "Description": "Wrap with formula to return OR of each column.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "st",
+        "stc",
+        "stbc"
+      ],
+      "Formula": "=BYCOL([[ActiveCell::Formula]],LAMBDA(x,OR(x)))",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Are Some/Any True By Row?",
+      "Description": "Wrap with formula to return OR of each row.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "st",
+        "str"
+      ],
+      "Formula": "=BYROW([[ActiveCell::Formula]],LAMBDA(x,OR(x)))",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Are Some/Any True?",
+      "Description": "Wrap with formula with OR function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "or"
+      ],
+      "Formula": "=OR([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Average Of Array",
+      "Description": "Wrap with AVERAGE function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "a",
+        "av"
+      ],
+      "Formula": "=AVERAGE([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Average Of Array By Column",
+      "Description": "Wrap with formula to return average of each column.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "ac",
+        "abc"
+      ],
+      "Formula": "=BYCOL([[ActiveCell::Formula]],LAMBDA(x,AVERAGE(x)))",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Average Of Array By Row",
+      "Description": "Wrap with formula to return average of each row.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "ar",
+        "abr"
+      ],
+      "Formula": "=BYROW([[ActiveCell::Formula]],LAMBDA(x,AVERAGE(x)))",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Concatenate Array",
+      "Description": "Wrap with CONCAT function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "c",
+        "ca",
+        "con"
+      ],
+      "Formula": "=CONCAT([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Concatenate Array By Column",
+      "Description": "Wrap with formula to return concatenation of each column.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "cc",
+        "cbc"
+      ],
+      "Formula": "=BYCOL([[ActiveCell::Formula]],LAMBDA(x,CONCAT(x)))",
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Concatenate Array By Row",
+      "Description": "Wrap with formula to return concatenation of each row.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "cr",
+        "cbr"
+      ],
+      "Formula": "=BYROW([[ActiveCell::Formula]],LAMBDA(x,CONCAT(x)))",
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Count Cells With Numbers",
+      "Description": "Wrap with COUNT function to count the cells with numbers.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "Formula": "=COUNT([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Count Columns Of Array",
+      "Description": "Wraps active array formula with COLUMNS function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "cc"
+      ],
+      "Formula": "=COLUMNS([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Count Non-Empty Cells",
+      "Description": "Wrap with COUNTA function to count the non-empty cells.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "Formula": "=COUNTA([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Count Rows Of Array",
+      "Description": "Wraps active array formula with ROWS function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "cr"
+      ],
+      "Formula": "=ROWS([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Count Unique Values In Array",
+      "Description": "Wrap with CountEachUniqueValue Lambda function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "Note": "Great for using in competitions to answer questions like \"which brand is mentioned the most in the data?\"",
+      "Documentation": [
+        "Count Unique Values In Array.md"
+      ],
+      "LaunchCodes": [
+        "cu"
+      ],
+      "Formula": "=CountEachUniqueValue([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Lambda",
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "CountEachUniqueValue.lambda"
+      ],
+      "UpdateFormulaDependencies": true
+    },
+    {
+      "Name": "Count Unique Values In Array By Column",
+      "Description": "Wraps active array formula with functions to count unique values by column (not case sensitive).",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "cuc",
+        "cubc"
+      ],
+      "Formula": "=BYCOL([[ActiveCell::Formula]],LAMBDA(x,COUNTA(UNIQUE(TOCOL(x)))))",
+      "ScrollToDestination": false,
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Count Unique Values In Array By Row",
+      "Description": "Wraps active array formula with functions to count unique values by row (not case sensitive).",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "cur",
+        "cubr"
+      ],
+      "Formula": "=BYROW([[ActiveCell::Formula]],LAMBDA(x,COUNTA(UNIQUE(TOCOL(x)))))",
+      "ScrollToDestination": false,
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Duplicate Array To Below",
+      "Description": "Adds array formula below referencing the spill range of active array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "da",
+        "dab"
+      ],
+      "Formula": "=[[ActiveCell.SpillParent.SpillingToRange]]",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent.SpillingToRange.Rows(1).AdjacentBlank.Cells(1,1)]]",
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Duplicate Array To Right",
+      "Description": "Adds array formula to right referencing the spill range of active array.",
+      "Type": "ExcelFormulaCommand",
+      "ShortCutSendKeyString": "Ctrl + Shift + r",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "da",
+        "dar"
+      ],
+      "Formula": "=[[ActiveCell.SpillParent.SpillingToRange]]",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent.SpillingToRange.Columns(1).AdjacentBlank.Cells(1,1)]]",
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Extract Columns Of Array To Below",
+      "Description": "Adds array formula to below returning selected rows of active array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "ec",
+        "ecb"
+      ],
+      "Formula": "=CHOOSECOLS([[ActiveCell.SpillParent.SpillingToRange]],{{Selected_Column_Indexes_In_Spilling_Range}})",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent.SpillingToRange.Rows(1).AdjacentBlank.Cells(1,1)]]",
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Extract Columns Of Array To Right",
+      "Description": "Adds array formula to right returning selected columns of active array.",
+      "Type": "ExcelFormulaCommand",
+      "ShortCutSendKeyString": "ctrl + alt + r",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "ec",
+        "ecr"
+      ],
+      "Formula": "=CHOOSECOLS([[ActiveCell.SpillParent.SpillingToRange]],{{Selected_Column_Indexes_In_Spilling_Range}})",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent.SpillingToRange.Columns(1).AdjacentBlank.Cells(1,1)]]",
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Extract Numbers From Text To Columns",
+      "Description": "Given a text value, split any numbers from text into row array of numbers.",
+      "Type": "ExcelFormulaCommand",
+      "LaunchCodes": [
+        "en"
+      ],
+      "Formula": "=SplitNumbersFromText([[ActiveCell]])",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent.SpillingToRange.Columns(1).AdjacentBlank.Cells(1,1)]]",
+      "FormulaDependencies": [
+        "SplitNumbersFromText.lambda"
+      ]
+    },
+    {
+      "Name": "Extract Rows Of Array To Below",
+      "Description": "Adds array formula to below returning selected rows of active array.",
+      "Type": "ExcelFormulaCommand",
+      "ShortCutSendKeyString": "ctrl + alt + d",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "er",
+        "erb"
+      ],
+      "Formula": "=CHOOSEROWS([[ActiveCell.SpillParent.SpillingToRange]],{{Selected_Row_Indexes_In_Spilling_Range}})",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent.SpillingToRange.Rows(1).AdjacentBlank.Cells(1,1)]]",
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Extract Rows Of Array To Right",
+      "Description": "Adds array formula to right returning selected rows of active array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "er",
+        "err"
+      ],
+      "Formula": "=CHOOSEROWS([[ActiveCell.SpillParent.SpillingToRange]],{{Selected_Row_Indexes_In_Spilling_Range}})",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent.SpillingToRange.Columns(1).AdjacentBlank.Cells(1,1)]]",
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Fill Blanks From Above",
+      "Description": "Wrap with FillFromAbove Lambda function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "fb",
+        "fba"
+      ],
+      "Formula": "=FillFromAbove([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Lambda",
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "TILE.lambda",
+        "FillFromAbove.lambda"
+      ],
+      "UpdateFormulaDependencies": true
+    },
+    {
+      "Name": "Fill Blanks From Below",
+      "Description": "Wrap with FillFromBelow Lambda function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "fb",
+        "fbb"
+      ],
+      "Formula": "=FillFromBelow([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Lambda",
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "TILE.lambda",
+        "FillFromBelow.lambda"
+      ],
+      "UpdateFormulaDependencies": true
+    },
+    {
+      "Name": "Fill Blanks From Left",
+      "Description": "Wrap with FillFromLeft Lambda function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "fb",
+        "fbl"
+      ],
+      "Formula": "=FillFromLeft([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Lambda",
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "TILE.lambda",
+        "FillFromLeft.lambda"
+      ],
+      "UpdateFormulaDependencies": true
+    },
+    {
+      "Name": "Fill Blanks From Right",
+      "Description": "Wrap with FillFromRight Lambda function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "fb",
+        "fbr"
+      ],
+      "Formula": "=FillFromRight([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Lambda",
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "TILE.lambda",
+        "FillFromRight.lambda"
+      ],
+      "UpdateFormulaDependencies": true
+    },
+    {
+      "Name": "If Blank Then Blank",
+      "Description": "Wrap with IFBLANK Then \"\" function so referenced blank cells will return blanks instead of zeros.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellContainsFormula",
+      "LaunchCodes": [
+        "bb"
+      ],
+      "Formula": "=IFBLANK([[ActiveCell::Formula]],\"\")",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Lambda",
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "IFBLANK.lambda"
+      ]
+    },
+    {
+      "Name": "If Blank Then NA",
+      "Description": "Wrap with IFBLANK Then NA function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellContainsFormula",
+      "LaunchCodes": [
+        "bna"
+      ],
+      "Formula": "=IFBLANK([[ActiveCell::Formula]],\"NA\")",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Lambda",
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "IFBLANK.lambda"
+      ]
+    },
+    {
+      "Name": "If Blank Then One (1)",
+      "Description": "Wrap with ReplaceBlanksWithOnes Lambda function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "b1"
+      ],
+      "Formula": "=ReplaceBlanksWithOnes([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Lambda",
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "ReplaceBlanksWithOnes.lambda"
+      ],
+      "UpdateFormulaDependencies": true
+    },
+    {
+      "Name": "If Blank Then Zero (0)",
+      "Description": "Wrap with ReplaceBlanksWithZeros Lambda function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "b0"
+      ],
+      "Formula": "=ReplaceBlanksWithZeros([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Lambda",
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "ReplaceBlanksWithZeros.lambda"
+      ],
+      "UpdateFormulaDependencies": true
+    },
+    {
+      "Name": "If Error Then Blank",
+      "Description": "Wrap with IFERROR function that returns \"\" if there is an error.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellContainsFormula",
+      "LaunchCodes": [
+        "eb"
+      ],
+      "Formula": "=IFERROR([[ActiveCell::Formula]],\"\")",
+      "DestinationRangeAddress": "[[ActiveCell]]",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "If Error Then NA",
+      "Description": "Wrap with IFERROR Then NA function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellContainsFormula",
+      "LaunchCodes": [
+        "ena",
+        "ife"
+      ],
+      "Formula": "=IFERROR([[ActiveCell::Formula]],\"NA\")",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "If Error Then Zero (0)",
+      "Description": "Wrap with IFERROR Then 0 function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellContainsFormula",
+      "LaunchCodes": [
+        "e0",
+        "ife"
+      ],
+      "Formula": "=IFERROR([[ActiveCell::Formula]],0)",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "If NA Then \"NA\"",
+      "Description": "Wrap with IFNA Then NA function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellContainsFormula",
+      "LaunchCodes": [
+        "nana",
+        "ifna"
+      ],
+      "Formula": "=IFNA([[ActiveCell::Formula]],\"NA\")",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "If NA Then Blank",
+      "Description": "Wrap with IFNA Then \"\" function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellContainsFormula",
+      "LaunchCodes": [
+        "nab"
+      ],
+      "Formula": "=IFNA([[ActiveCell::Formula]],\"\")",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "If NA Then Zero (0)",
+      "Description": "Wrap with IFNA Then 0 function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellContainsFormula",
+      "LaunchCodes": [
+        "na0",
+        "ifna"
+      ],
+      "Formula": "=IFNA([[ActiveCell::Formula]],0)",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "If Text Then 0",
+      "Description": "Replaces text values with zeros.",
+      "Type": "ExcelFormulaCommand",
+      "LaunchCodes": [
+        "t0"
+      ],
+      "Formula": "=IfText([[ActiveCell::Formula]], 0)",
+      "FormulaDependencies": [
+        "IfText.lambda"
+      ]
+    },
+    {
+      "Name": "If Zero (0) Then Blank",
+      "Description": "Wrap with ReplaceZerosWithBlanks Lambda function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellContainsFormula",
+      "LaunchCodes": [
+        "0b",
+        "if0"
+      ],
+      "Formula": "=ReplaceZerosWithBlanks([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Lambda",
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "ReplaceZerosWithBlanks.lambda"
+      ],
+      "UpdateFormulaDependencies": true
+    },
+    {
+      "Name": "Import Array Robot Vol 1's Lambdas",
+      "Description": "Imports Array Robot Vol 1's lambda collection into active workbook.",
+      "Type": "VBAMacroCommand",
+      "MacroExpression": "modImportLambdas.ImportAllLambdas(\"Array Robot Vol 1.xlsm\")",
+      "MacroWorkbookConnection": "Lambda Robot"
+    },
+    {
+      "Name": "Is Error?",
+      "Description": "Wrap with ISERROR function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellContainsFormula",
+      "LaunchCodes": [
+        "ie",
+        "ise",
+        "ier"
+      ],
+      "Formula": "=ISERROR([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Is Even?",
+      "Description": "Wrap with ISEVEN function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellValueIsInteger",
+      "LaunchCodes": [
+        "ie",
+        "ise",
+        "iev"
+      ],
+      "Formula": "=ISEVEN(+[[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Is False?",
+      "Description": "Wrap with NOT function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellContainsFormula",
+      "LaunchCodes": [
+        "if",
+        "isf",
+        "ifa"
+      ],
+      "Formula": "=NOT([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Is NA?",
+      "Description": "Wrap with ISNA function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellContainsFormula",
+      "LaunchCodes": [
+        "ina",
+        "isna"
+      ],
+      "Formula": "=ISNA([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Is Not True?",
+      "Description": "Wrap with NOT function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellContainsFormula",
+      "LaunchCodes": [
+        "not"
+      ],
+      "Formula": "=NOT([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Is Odd?",
+      "Description": "Wrap with ISODD function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellValueIsInteger",
+      "LaunchCodes": [
+        "odd"
+      ],
+      "Formula": "=ISODD(+[[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Is One (1)?",
+      "Description": "Wraps active formula with Lambda function that returns TRUE for 1's and FALSE otherwise.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellContainsFormula",
+      "LaunchCodes": [
+        "is1"
+      ],
+      "Formula": "=IsOne([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Lambda",
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "IsOne.lambda"
+      ],
+      "UpdateFormulaDependencies": true
+    },
+    {
+      "Name": "Is Zero (0)?",
+      "Description": "Wraps active formula with Lambda function that returns TRUE for 0's and FALSE if blank or non-zero.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellContainsFormula",
+      "LaunchCodes": [
+        "is0"
+      ],
+      "Formula": "=IsZero([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Lambda",
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "IsZero.lambda"
+      ],
+      "UpdateFormulaDependencies": true
+    },
+    {
+      "Name": "Keep Columns Of Array",
+      "Description": "Wraps array formula with CHOOSECOLS of all selected columns.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "kc"
+      ],
+      "Formula": "=CHOOSECOLS([[ActiveCell.SpillParent::Formula]],{{Selected_Column_Indexes_In_Spilling_Range}})",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Keep First Column Of Array",
+      "Description": "Wrap with formula to return first column of array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "kfc"
+      ],
+      "Formula": "=TAKE([[ActiveCell.SpillParent::Formula]],,1)",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Keep First N Columns Of Array",
+      "Description": "Wrap with formula to return first N columns of array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "kfc",
+        "kfnc"
+      ],
+      "Formula": "=TAKE([[ActiveCell.SpillParent::Formula]],,{{Number_Of_Columns}})",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Keep First N Rows Of Array",
+      "Description": "Wrap with formula to return first N rows of array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "kfr",
+        "ktr",
+        "kfnr",
+        "ktnr",
+        "kn",
+        "kfn",
+        "ktn"
+      ],
+      "Formula": "=TAKE([[ActiveCell.SpillParent::Formula]],{{Number_Of_Rows}})",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Keep First Row Of Array",
+      "Description": "Wrap with formula to return first row of array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "kfr",
+        "ktr"
+      ],
+      "Formula": "=TAKE([[ActiveCell.SpillParent::Formula]],1)",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Keep Last Column Of Array",
+      "Description": "Wrap with formula to return last column of array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "klc"
+      ],
+      "Formula": "=TAKE([[ActiveCell.SpillParent::Formula]],,-1)",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Keep Last N Columns Of Array",
+      "Description": "Wrap with formula to return last N columns of array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "klc",
+        "klnc"
+      ],
+      "Formula": "=TAKE([[ActiveCell.SpillParent::Formula]],,-{{Number_Of_Columns}})",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Keep Last N Rows Of Array",
+      "Description": "Wrap with formula to return last N rows of array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "klr",
+        "kbr",
+        "klnr",
+        "kbnr",
+        "kbn",
+        "kln"
+      ],
+      "Formula": "=TAKE([[ActiveCell.SpillParent::Formula]],-{{Number_Of_Rows}})",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Keep Last Row Of Array",
+      "Description": "Wrap with formula to return last row of array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "klr",
+        "kbr"
+      ],
+      "Formula": "=TAKE([[ActiveCell.SpillParent::Formula]],-1)",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Keep Rows Of Array",
+      "Description": "Wraps array formula with CHOOSECOLS of all selected rows.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "kr"
+      ],
+      "Formula": "=CHOOSEROWS([[ActiveCell.SpillParent::Formula]],{{Selected_Row_Indexes_In_Spilling_Range}})",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Max Of Array",
+      "Description": "Wrap with MAX function to return the maximum.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "max"
+      ],
+      "Formula": "=MAX([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Max Of Array By Column",
+      "Description": "Wrap with formula to return max of each column.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "maxc",
+        "maxbc"
+      ],
+      "Formula": "=BYCOL([[ActiveCell::Formula]],LAMBDA(x,MAX(x)))",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Max Of Array By Row",
+      "Description": "Wrap with formula to return max of each row.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "maxr",
+        "maxbr"
+      ],
+      "Formula": "=BYROW([[ActiveCell::Formula]],LAMBDA(x,MAX(x)))",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Median Of Array",
+      "Description": "Wrap with MEDIAN function to return the median.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "med"
+      ],
+      "Formula": "=MEDIAN([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Min Of Array",
+      "Description": "Wrap with MIN function to return the minimum.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "min"
+      ],
+      "Formula": "=MIN([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Min Of Array By Column",
+      "Description": "Wrap with formula to return min of each column.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "minc",
+        "minbc"
+      ],
+      "Formula": "=BYCOL([[ActiveCell::Formula]],LAMBDA(x,MIN(x)))",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Min Of Array By Row",
+      "Description": "Wrap with formula to return min of each row.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "minr",
+        "minbr"
+      ],
+      "Formula": "=BYROW([[ActiveCell::Formula]],LAMBDA(x,MIN(x)))",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Paste Characters",
+      "Description": "Paste copied cells split by character using SplitByCharacter lambda.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelSelectionIsSingleCell;ClipboardHasExcelData;ExcelSelectionIsEmpty",
+      "LaunchCodes": [
+        "pc"
+      ],
+      "Formula": "=SplitByCharacter([[Clipboard]])",
+      "FormulaDependencies": [
+        "SplitByCharacter.lambda",
+        "TILE.lambda"
+      ]
+    },
+    {
+      "Name": "Paste Count Unique Values In Array",
+      "Description": "Paste Counts of each unique value in the copied range.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ClipboardHasExcelData;ExcelActiveCellIsEmpty;ExcelSelectionIsSingleCell",
+      "Note": "Great for using in competitions to answer questions like \"which brand is mentioned the most in the data?\"",
+      "Documentation": [
+        "Count Unique Values In Array.md"
+      ],
+      "LaunchCodes": [
+        "pcu"
+      ],
+      "Formula": "=CountEachUniqueValue([[Clipboard]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Lambda",
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "CountEachUniqueValue.lambda"
+      ],
+      "UpdateFormulaDependencies": true
+    },
+    {
+      "Name": "Paste Distinct/Unique Row Values",
+      "Description": "Pastes the values of distinct/unique rows of the copied cells to the active cell.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ClipboardHasExcelData;ExcelActiveCellIsEmpty",
+      "LaunchCodes": [
+        "pd",
+        "pu"
+      ],
+      "Formula": "=UNIQUE([[Clipboard]])",
+      "ConvertToValues": "Yes"
+    },
+    {
+      "Name": "Paste Lookup",
+      "Description": "Wrap active cell with XLOOKUP function to lookup each value in first row of copied cells and return corresponding last column of copied cells.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ClipboardHasExcelData;ExcelActiveCellIsNotEmpty",
+      "LaunchCodes": [
+        "pl"
+      ],
+      "Formula": "=XLOOKUP([[ActiveCell::Formula]],CHOOSECOLS([[Clipboard::AddressAbsoluteAbsolute]],1),CHOOSECOLS([[Clipboard::AddressAbsoluteAbsolute]],-1))"
+    },
+    {
+      "Name": "Paste Sequence Across/Right",
+      "Description": "Pastes a SEQUENCE function in the active cell spilling across to right based on the copied integer value.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ClipboardHasExcelData",
+      "LaunchCodes": [
+        "ps",
+        "psr"
+      ],
+      "Formula": "=SEQUENCE(,[[Clipboard]])",
+      "Tags": [
+        "Paste",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Paste Sequence Down",
+      "Description": "Pastes a SEQUENCE function in the active cell spilling down based on the copied integer value.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ClipboardHasExcelData",
+      "LaunchCodes": [
+        "ps",
+        "psd"
+      ],
+      "Formula": "=SEQUENCE([[Clipboard]])",
+      "Tags": [
+        "Paste",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Paste Unpivot Array",
+      "Description": "Pastes array formula with function to unpivot copied range by all column headers to the right.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ClipboardHasExcelData;ExcelActiveCellIsEmpty;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "pu",
+        "pua"
+      ],
+      "Formula": "=UNPIVOT([[Clipboard]])",
+      "Tags": [
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "UNPIVOT.lambda",
+        "CROSSJOIN.lambda"
+      ],
+      "UpdateFormulaDependencies": true
+    },
+    {
+      "Name": "Product Of Array",
+      "Description": "Wrap with PRODUCT function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "Formula": "=PRODUCT([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Product Of Array By Column",
+      "Description": "Wrap with formula to return product of each column.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "prod",
+        "prodc"
+      ],
+      "Formula": "=BYCOL([[ActiveCell::Formula]],LAMBDA(x,PRODUCT(x)))",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Product Of Array By Row",
+      "Description": "Wrap with formula to return product of each row.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "prod",
+        "prodr"
+      ],
+      "Formula": "=BYROW([[ActiveCell::Formula]],LAMBDA(x,PRODUCT(x)))",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Remove Blank Rows And Columns",
+      "Description": "Wrap existing formula with RemoveBlanks Lambda function to remove blanks rows and columns from array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "rb",
+        "rbr",
+        "rbc"
+      ],
+      "Formula": "=RemoveBlanks([[ActiveCell.SpillParent::Formula]])",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Lambda",
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "RemoveBlanks.lambda"
+      ],
+      "UpdateFormulaDependencies": true
+    },
+    {
+      "Name": "Remove Columns Of Array",
+      "Description": "Removes specified columns of array using RemoveCols lambda.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "HelpImage": "Remove_Columns_Rows_Of_Array.png",
+      "LaunchCodes": [
+        "rc"
+      ],
+      "Formula": "=RemoveCols([[ActiveCell.SpillParent::Formula]], {{Selected_Column_Indexes_In_Spilling_Range}})",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "FormulaDependencies": [
+        "RemoveCols.lambda"
+      ]
+    },
+    {
+      "Name": "Remove First Column Of Array",
+      "Description": "Wrap with DROP function to drop first column of array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "rfc"
+      ],
+      "Formula": "=DROP([[ActiveCell.SpillParent::Formula]],,1)",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Remove First N Columns Of Array",
+      "Description": "Wrap with DROP function to drop first N columns of array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "rfc",
+        "rfnc"
+      ],
+      "Formula": "=DROP([[ActiveCell.SpillParent::Formula]],,{{Number_Of_Columns}})",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Remove First N Rows Of Array",
+      "Description": "Wrap with DROP function to drop first N rows of array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "rfr",
+        "rtr",
+        "rfn",
+        "rfnr",
+        "rtn",
+        "rtnr"
+      ],
+      "Formula": "=DROP([[ActiveCell.SpillParent::Formula]],{{Number_Of_Rows}})",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Remove First Row Of Array",
+      "Description": "Wrap with DROP function to drop first row of array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "rfr",
+        "rtr"
+      ],
+      "Formula": "=DROP([[ActiveCell.SpillParent::Formula]],1)",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Remove Last Column Of Array",
+      "Description": "Wrap with DROP function to drop last column of array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "rlc"
+      ],
+      "Formula": "=DROP([[ActiveCell.SpillParent::Formula]],,-1)",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Remove Last N Columns Of Array",
+      "Description": "Wrap with DROP function to drop last N columns of array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "rlc",
+        "rlnc"
+      ],
+      "Formula": "=DROP([[ActiveCell.SpillParent::Formula]],,-{{Number_Of_Columns}})",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Remove Last N Rows Of Array",
+      "Description": "Wrap with DROP function to drop last N rows of array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "rlr",
+        "rbr",
+        "rfn",
+        "rfnr",
+        "rbn",
+        "rbnr"
+      ],
+      "Formula": "=DROP([[ActiveCell.SpillParent::Formula]],-{{Number_Of_Rows}})",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Remove Last Row Of Array",
+      "Description": "Wrap with DROP function to remove last row of array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "rlr",
+        "rbr"
+      ],
+      "Formula": "=DROP([[ActiveCell.SpillParent::Formula]],-1)",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Remove Other Columns Of Array",
+      "Description": "Wraps array formula with CHOOSECOLS of all selected columns.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "roc"
+      ],
+      "Formula": "=CHOOSECOLS([[ActiveCell.SpillParent::Formula]],{{Selected_Column_Indexes_In_Spilling_Range}})",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Remove Other Rows Of Array",
+      "Description": "Wraps array formula with CHOOSECOLS of all selected rows.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "ror"
+      ],
+      "Formula": "=CHOOSEROWS([[ActiveCell.SpillParent::Formula]],{{Selected_Row_Indexes_In_Spilling_Range}})",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "ScrollToDestination": false,
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Remove Rows Of Array",
+      "Description": "Removes specified rows of array using RemoveRows lambda.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "HelpImage": "MyImage.gif",
+      "LaunchCodes": [
+        "rr"
+      ],
+      "Formula": "=RemoveRows([[ActiveCell.SpillParent::Formula]], {{Selected_Row_Indexes_In_Spilling_Range}})",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "FormulaDependencies": [
+        "RemoveRows.lambda"
+      ]
+    },
+    {
+      "Name": "Reshape To One (1) Column",
+      "Description": "Wrap with TOCOL function to return as a column.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "1c",
+        "toc",
+        "tocol"
+      ],
+      "Formula": "=TOCOL([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Reshape To One (1) Row",
+      "Description": "Wrap with TOROW function to return as a row.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "1r",
+        "tor",
+        "torow"
+      ],
+      "Formula": "=TOROW([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Reverse Columns (Flip Array Horizontally)",
+      "Description": "Wrap existing formula with ReverseColumns Lambda function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "rev",
+        "revc",
+        "fa",
+        "fah"
+      ],
+      "Formula": "=ReverseColumns([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Lambda",
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "ReverseColumns.lambda"
+      ],
+      "UpdateFormulaDependencies": true
+    },
+    {
+      "Name": "Reverse Rows (Flip Array Vertically)",
+      "Description": "Wrap existing formula with ReverseRows Lambda function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "rev",
+        "revr",
+        "fa",
+        "fav"
+      ],
+      "Formula": "=ReverseRows([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Lambda",
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "ReverseRows.lambda"
+      ],
+      "UpdateFormulaDependencies": true
+    },
+    {
+      "Name": "Running Product Of Array",
+      "Description": "Wrap with RunningProduct Lambda function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "rp"
+      ],
+      "Formula": "=RunningProduct([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Lambda",
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "RunningProduct.lambda"
+      ],
+      "UpdateFormulaDependencies": true
+    },
+    {
+      "Name": "Running Total Of Array",
+      "Description": "Wrap with RunningTotal Lambda function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "rt"
+      ],
+      "Formula": "=RunningTotal([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Lambda",
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "RunningTotal.lambda"
+      ],
+      "UpdateFormulaDependencies": true
+    },
+    {
+      "Name": "Running Totals By Column",
+      "Description": "Wrap with RunningTotalsByColumn Lambda function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "rt",
+        "rtc"
+      ],
+      "Formula": "=RunningTotalsByColumn([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Lambda",
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "RunningTotalsByColumn.lambda"
+      ],
+      "UpdateFormulaDependencies": true
+    },
+    {
+      "Name": "Running Totals By Row",
+      "Description": "Wrap with RunningTotalsByRow Lambda function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "rt",
+        "rtr"
+      ],
+      "Formula": "=RunningTotalsByRow([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Lambda",
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "RunningTotalsByRow.lambda"
+      ],
+      "UpdateFormulaDependencies": true
+    },
+    {
+      "Name": "Sort Array Asc",
+      "Description": "Wraps array formula with SORT function by selected columns of active array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "sa"
+      ],
+      "Formula": "=SORT([[ActiveCell.SpillParent::Formula]],{{Selected_Column_Indexes_In_Spilling_Range}})",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Sort Array Desc",
+      "Description": "Wraps array formula with SORT function by selected columns of active array.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange",
+      "LaunchCodes": [
+        "sad"
+      ],
+      "Formula": "=SORT([[ActiveCell.SpillParent::Formula]],{{Selected_Column_Indexes_In_Spilling_Range}},-1)",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "Tags": [
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Split By Character",
+      "Description": "Split active cell by character as row vector using SplitByCharacter lambda.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsNotEmpty",
+      "LaunchCodes": [
+        "sbc"
+      ],
+      "Formula": "=SplitByCharacter([[ActiveCell::Formula]])",
+      "FormulaDependencies": [
+        "SplitByCharacter.lambda",
+        "TILE.lambda"
+      ]
+    },
+    {
+      "Name": "Split By Digit",
+      "Description": "Split active cell by digits as row vector using SplitByDigits lambda.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsNotEmpty",
+      "LaunchCodes": [
+        "sbd"
+      ],
+      "Formula": "=SplitByDigit([[ActiveCell::Formula]])",
+      "FormulaDependencies": [
+        "SplitByDigit.lambda",
+        "TILE.lambda"
+      ]
+    },
+    {
+      "Name": "Split Numbers From Text To Columns",
+      "Description": "Given a text value, split any numbers from text into row array of numbers.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "sn"
+      ],
+      "Formula": "=SplitNumbersFromText([[ActiveCell::Formula]])",
+      "FormulaDependencies": [
+        "SplitNumbersFromText.lambda",
+        "TILE.lambda"
+      ]
+    },
+    {
+      "Name": "Sum Array",
+      "Description": "Wrap with SUM function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "sum"
+      ],
+      "Formula": "=SUM([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Sum Array By Column",
+      "Description": "Wrap with formula to return sum of each column.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "sbc",
+        "sumc",
+        "sumbc"
+      ],
+      "Formula": "=BYCOL([[ActiveCell::Formula]],LAMBDA(x,SUM(x)))",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Sum Array By Row",
+      "Description": "Wrap with formula to return sum of each row.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "sbr",
+        "sumr",
+        "sumbr"
+      ],
+      "Formula": "=BYROW([[ActiveCell::Formula]],LAMBDA(x,SUM(x)))",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Transpose Array",
+      "Description": "Wrap with TRANSPOSE function.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "t",
+        "ta"
+      ],
+      "Formula": "=TRANSPOSE([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Unique Columns Of Array",
+      "Description": "Wrap with UNIQUE function to return the unique column values.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "ur"
+      ],
+      "Formula": "=UNIQUE([[ActiveCell::Formula]], TRUE)",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Unique Rows Of Array",
+      "Description": "Wrap with UNIQUE function to return the unique values.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent",
+      "LaunchCodes": [
+        "ur"
+      ],
+      "Formula": "=UNIQUE([[ActiveCell::Formula]])",
+      "ScrollToDestination": false,
+      "Tags": [
+        "WrapWith",
+        "Vol1"
+      ]
+    },
+    {
+      "Name": "Unpivot Array",
+      "Description": "Wraps array formula with function to unpivot by all column headers to the right.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsSpillParent;ExcelSelectionIsSingleCell",
+      "LaunchCodes": [
+        "u",
+        "up",
+        "ua",
+        "upa"
+      ],
+      "Formula": "=UNPIVOT([[ActiveCell::Formula]])",
+      "Tags": [
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "UNPIVOT.lambda",
+        "CROSSJOIN.lambda"
+      ]
+    },
+    {
+      "Name": "Unpivot Array (By Selected Columns)",
+      "Description": "Wraps array formula with function to unpivot by selected column headers.",
+      "Type": "ExcelFormulaCommand",
+      "UserContextFilter": "ExcelActiveCellIsInSpillingToRange;ExcelSelectionIsSingleArea;ExcelSelectionIsSingleRow;ExcelSelectionIsMultipleColumns",
+      "LaunchCodes": [
+        "u",
+        "up",
+        "ua",
+        "upa"
+      ],
+      "Formula": "=UNPIVOT([[ActiveCell.SpillParent::Formula]],[[Selection::ValueArray]])",
+      "DestinationRangeAddress": "[[ActiveCell.SpillParent]]",
+      "Tags": [
+        "Vol1"
+      ],
+      "FormulaDependencies": [
+        "UNPIVOT.lambda",
+        "CROSSJOIN.lambda"
+      ],
+      "UpdateFormulaDependencies": true
+    }
+  ]
+}

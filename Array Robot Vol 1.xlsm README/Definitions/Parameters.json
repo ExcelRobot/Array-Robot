@@ -1,0 +1,32 @@
+{
+  "Parameters": [
+    {
+      "Name": "Selected_Column_Indexes_In_Spilling_Range",
+      "Description": "List which columns of spilled array are included in selection.",
+      "Type": "VBAMacroParameter",
+      "Value": "{1}",
+      "MacroExpression": "modRange.ListTargetColumnIndexesInSpillingRange([[Selection]])"
+    },
+    {
+      "Name": "Selected_Row_Indexes_In_Spilling_Range",
+      "Description": "List which rows of spilled array are included in selection.",
+      "Type": "VBAMacroParameter",
+      "Value": "{4,5,6,7}",
+      "MacroExpression": "modRange.ListTargetRowIndexesInSpillingRange([[Selection]])"
+    },
+    {
+      "Name": "Unselected_Column_Indexes_In_Spilling_Range",
+      "Description": "List which columns of spilled array are not included in selection.",
+      "Type": "VBAMacroParameter",
+      "Value": "{1,2,5,6}",
+      "MacroExpression": "modRange.ListNonTargetColumnIndexesInSpillingRange([[Selection]])"
+    },
+    {
+      "Name": "Unselected_Row_Indexes_In_Spilling_Range",
+      "Description": "List which rows of spilled array are not included in selection.",
+      "Type": "VBAMacroParameter",
+      "Value": "{1,2,3,4,6}",
+      "MacroExpression": "modRange.ListNonTargetRowIndexesInSpillingRange([[Selection]])"
+    }
+  ]
+}

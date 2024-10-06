@@ -1,0 +1,22 @@
+/*
+Remove all blank rows and columns.  (array - array of values to evaluate for blank rows and columns)
+*/
+RemoveBlanks =LAMBDA(array,[remove_rows],[remove_columns], LET(
+   \\LambdaName, "REMOVEBLANKS",
+   \\CommandName, "Remove Blanks",
+   \\Description, "Remove all blank rows and columns.",
+   \\Parameters, {"array","array of values to evaluate for blank rows and columns"},
+   \\Source, "Excel Robot",
+   _NonBlanks, (--ISBLANK(array) + (array = "")) = 0,
+   _NonBlankColumns, FILTER(
+      SEQUENCE(1, COLUMNS(_NonBlanks)),
+      (BYCOL(--_NonBlanks, LAMBDA(x, SUM(x))) <> 0)
+         + IF(ISOMITTED(remove_columns), 0, 1 - remove_columns)
+   ),
+   _NonBlankRows, FILTER(
+      SEQUENCE(ROWS(_NonBlanks)),
+      (BYROW(--_NonBlanks, LAMBDA(x, SUM(x))) <> 0) + IF(ISOMITTED(remove_rows), 0, 1 - remove_rows)
+   ),
+   _Result, CHOOSEROWS(CHOOSECOLS(IF(array = "", "", array), _NonBlankColumns), _NonBlankRows),
+   _Result
+));

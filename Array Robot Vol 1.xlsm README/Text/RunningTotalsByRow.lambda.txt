@@ -1,0 +1,4 @@
+RunningTotalsByRow = LAMBDA(array,LET(    \\LambdaName, "RunningTotalsByRow",
+   Result, MAKEARRAY(ROWS(array),COLUMNS(array),LAMBDA(x,y,SUM(INDEX(array,x,SEQUENCE(1,y))))),
+   Result
+));

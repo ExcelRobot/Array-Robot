@@ -1,0 +1,7 @@
+IsWhiteSpace =LAMBDA(letters, LET(
+   \\LambdaName, "IsWhiteSpace",
+   MAP(
+      "" & letters,
+      LAMBDA(x, OR(CODE(x) = 32, CODE(x) = 9, CODE(x) = 10, CODE(x) = 13))
+   )
+));

@@ -1,0 +1,11 @@
+/*Removes specified rows of array using RemoveRows lambda.  */
+RemoveRows = LAMBDA(array,row_indexes, LET(
+   \\LambdaName, "RemoveRows",
+   \\CommandName, "Remove Rows Of Array",
+   \\Description, "Removes specified rows of array using RemoveRows lambda.",
+   _Seq, SEQUENCE(ROWS(array)),
+   _Keep, ISERROR(MATCH(_Seq, TOROW(row_indexes), 0)),
+   _Included, FILTER(_Seq, _Keep, TRUE),
+   _Result, CHOOSEROWS(array, _Included),
+   _Result
+));

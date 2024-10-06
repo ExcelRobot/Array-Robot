@@ -1,0 +1,6 @@
+ReverseRows =LAMBDA(array,LET(
+   \\LambdaName, "ReverseRows",
+   \\CommandName, "Reverse Rows",
+   \\Description, "Returns array in reverse row order.",
+SORTBY(array,SEQUENCE(ROWS(array)),-1))
+);

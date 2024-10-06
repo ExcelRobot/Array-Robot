@@ -1,0 +1,1 @@
+SumByRow =LAMBDA(array,BYROW(array,LAMBDA(col,SUM(col))) );

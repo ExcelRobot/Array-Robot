@@ -1,0 +1,48 @@
+Unpivot =LAMBDA(table,[columns_to_unpivot],[attribute_name],[value_name],[remove_blanks], LET(
+   _ColumnsToUnpivot, IF(
+      ISOMITTED(columns_to_unpivot),
+      DROP(TAKE(table, 1), , 1),
+      columns_to_unpivot
+   ),
+   _AttributeLabel, IF(ISOMITTED(attribute_name), "Attribute", attribute_name),
+   _ValueLabel, IF(ISOMITTED(value_name), "Value", value_name),
+   _FirstColumnToUnpivot, MATCH(
+      INDEX(_ColumnsToUnpivot, , 1),
+      INDEX(table, 1, ),
+      0
+   ),
+   _UnpivotColumnCount, COLUMNS(_ColumnsToUnpivot),
+   _ColumnNumbers, SEQUENCE(1, COLUMNS(table)),
+   _IncludeColumns, (_ColumnNumbers >= _FirstColumnToUnpivot)
+      * (_ColumnNumbers < _FirstColumnToUnpivot + _UnpivotColumnCount),
+   _UnpivotColumns, FILTER(_ColumnNumbers, _IncludeColumns),
+   _OtherColumns, FILTER(_ColumnNumbers, NOT(_IncludeColumns)),
+   _FullOuterJoin, CrossJoin(
+      CHOOSECOLS(table, _OtherColumns),
+      VSTACK(_AttributeLabel, TRANSPOSE(_ColumnsToUnpivot)),
+      TRUE
+   ),
+   _WithValues, HSTACK(
+      _FullOuterJoin,
+      VSTACK(_ValueLabel, TOCOL(DROP(CHOOSECOLS(table, _UnpivotColumns), 1)))
+   ),
+   _RemoveBlanks, IF(
+      OR(ISOMITTED(remove_blanks), remove_blanks),
+      FILTER(_WithValues, INDEX(_WithValues, , COLUMNS(_WithValues)) <> ""),
+      IF(_WithValues = "", "", _WithValues)
+   ),
+   _ColumnOrder, LET(
+      n, COLUMNS(_RemoveBlanks),
+      s, SEQUENCE(1, n),
+      IFS(
+         s < _FirstColumnToUnpivot,
+         s,
+         s < _FirstColumnToUnpivot + 2,
+         s + n - _FirstColumnToUnpivot - 1,
+         TRUE,
+         s - 2
+      )
+   ),
+   _Result, CHOOSECOLS(_RemoveBlanks, _ColumnOrder),
+   _Result
+));
