@@ -4,7 +4,7 @@
       "Name": "Selected_Column_Indexes_In_Spilling_Range",
       "Description": "List which columns of spilled array are included in selection.",
       "Type": "VBAMacroParameter",
-      "Value": "{1}",
+      "Value": "{3,4,5}",
       "MacroExpression": "modRange.ListTargetColumnIndexesInSpillingRange([[Selection]])"
     },
     {
